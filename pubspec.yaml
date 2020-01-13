@@ -19,4 +19,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images
+    # 下タブ
+    - assets/images/hdpi/add_tab_icon.png
+    - assets/images/hdpi/home_tab_icon.png
+    - assets/images/hdpi/list_tab_icon.png
+    - assets/images/hdpi/preference_tab_icon.png

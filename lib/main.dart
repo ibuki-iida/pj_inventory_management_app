@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home'),
     );
   }
 }
@@ -26,13 +25,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+//    setState(() {
+//    });
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      bottomNavigationBar: _bottomNavigationBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,17 +43,68 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              'a',
               style: Theme.of(context).textTheme.display1,
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  Widget _bottomNavigationBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      items: [
+        BottomNavigationBarItem(
+          icon: ImageIcon(
+            AssetImage('assets/images/hdpi/home_tab_icon.png'),
+            color: Colors.black,
+          ),
+          title: Text(
+            'Home',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+        ),
+        BottomNavigationBarItem(
+          icon: ImageIcon(
+            AssetImage('assets/images/hdpi/list_tab_icon.png'),
+            color: Colors.black,
+          ),
+          title: Text(
+            '一覧',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+        ),
+        BottomNavigationBarItem(
+          icon: ImageIcon(
+            AssetImage('assets/images/hdpi/add_tab_icon.png'),
+            color: Colors.black,
+          ),
+          title: Text(
+            '追加',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+        ),
+        BottomNavigationBarItem(
+          icon: ImageIcon(
+            AssetImage('assets/images/hdpi/preference_tab_icon.png'),
+            color: Colors.black,
+          ),
+          title: Text(
+            '設定',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+        )
+      ],
     );
   }
 }
