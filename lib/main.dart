@@ -25,9 +25,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-//    setState(() {
-//    });
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
             Text(
               'a',
               style: Theme.of(context).textTheme.display1,
