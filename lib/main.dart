@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.lightGray,
         accentColor: Colors.red,
       ),
-      home: MyHomePage(title: 'Home'),
+      home: MyHomePage(title: '在庫一覧'),
     );
   }
 }
@@ -62,18 +62,18 @@ class _MyHomePageState extends State<MyHomePage> {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       items: [
-        BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage('assets/images/hdpi/home_tab_icon.png'),
-            color: Colors.black,
-          ),
-          title: Text(
-            'Home',
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
-        ),
+//        BottomNavigationBarItem(
+//          icon: ImageIcon(
+//            AssetImage('assets/images/hdpi/home_tab_icon.png'),
+//            color: Colors.black,
+//          ),
+//          title: Text(
+//            'Home',
+//            style: TextStyle(
+//              color: Colors.black,
+//            ),
+//          ),
+//        ),
         BottomNavigationBarItem(
           icon: ImageIcon(
             AssetImage('assets/images/hdpi/list_tab_icon.png'),
@@ -98,18 +98,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage('assets/images/hdpi/preference_tab_icon.png'),
-            color: Colors.black,
-          ),
-          title: Text(
-            '設定',
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
-        )
+//        BottomNavigationBarItem(
+//          icon: ImageIcon(
+//            AssetImage('assets/images/hdpi/preference_tab_icon.png'),
+//            color: Colors.black,
+//          ),
+//          title: Text(
+//            '設定',
+//            style: TextStyle(
+//              color: Colors.black,
+//            ),
+//          ),
+//        )
       ],
     );
   }
