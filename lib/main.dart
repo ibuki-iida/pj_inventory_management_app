@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_management_app/src/page/app_colors.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        splashColor: Colors.transparent,
+        iconTheme: IconThemeData(color: Colors.transparent),
+        accentIconTheme: IconThemeData(color: Colors.transparent),
+        buttonTheme: ButtonThemeData(
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          splashColor: Colors.transparent,
+        ),
+        hoverColor: Colors.transparent,
+        fontFamily: 'YuGothic',
+        scaffoldBackgroundColor: AppColors.lightGray,
+        accentColor: Colors.red,
       ),
       home: MyHomePage(title: 'Home'),
     );
